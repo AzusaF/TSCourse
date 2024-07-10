@@ -32,7 +32,8 @@ type SkiSchoolStudent = {
    age: number;
    sport: "ski" | "snowboard";
    level: SkillLevel;
-}
+};
+
 // **********************************************
 // ******************* PART 5 *******************
 // **********************************************
@@ -44,7 +45,7 @@ type RGB = {
    r: number;
    g: number;
    b: number;
-}
+};
 
 // Define a type to represent an HSL color
 // h should be a number
@@ -54,7 +55,7 @@ type HSL = {
    h: number;
    s: number;
    l: number;
-}
+};
 
 // Create an array called colors that can hold a mixture of RGB and HSL color types
 let colors: RGB | HSL;
