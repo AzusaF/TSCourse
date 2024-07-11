@@ -58,7 +58,7 @@ type HSL = {
 };
 
 // Create an array called colors that can hold a mixture of RGB and HSL color types
-let colors: RGB | HSL;
+let colors: (RGB | HSL)[];
 
 // **********************************************
 // ******************* PART 6 *******************
@@ -66,11 +66,11 @@ let colors: RGB | HSL;
 // Write a function called greet that accepts a single string OR an array of strings
 // It should print "Hello, <name>" for that single person OR greet each person in the array with the same format
 function greet(str: string | string[]){
-   if (str is array){
-      for (let i = 0; i < length; i++){
-         console.log("Hello, ${str[i]}\n");
-      }
+   if (typeof str == "string"){
+      console.log(`Hello, ${str}\n`);
    } else {
-      console.log("Hello, ${str}\n");
+      for (let s of str){
+         console.log(`Hello, ${s}\n`);
+      }
    }
 }
